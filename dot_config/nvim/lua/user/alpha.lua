@@ -28,7 +28,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	local date = ""
+	local date = os.date("%Y-%m-%d")
 	return "Hello:" .. date
 end
 
