@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/jamie/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/Users/jamie/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/jamie/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -247,7 +252,7 @@ _G.packer_plugins = {
     url = "https://github.com/RRethy/vim-illuminate"
   },
   vimtex = {
-    config = { "\27LJ\2\nﬁ\2\0\0\a\0\f\0\0186\0\0\0009\0\1\0005\1\3\0004\2\0\0=\2\4\0015\2\5\0=\2\6\1=\1\2\0006\0\0\0009\0\a\0009\0\b\0)\2\0\0'\3\t\0'\4\n\0'\5\v\0004\6\0\0B\0\6\1K\0\1\0H<cmd>lua vim.lsp.buf.format()<CR><cmd>w<CR><cmd>VimtexCompileSS<CR>\14<leader>w\6n\24nvim_buf_set_keymap\bapi\foptions\1\5\0\0\r-verbose\21-file-line-error\15-synctex=1\29-interaction=nonstopmode\nhooks\1\0\4\15executable\flatexmk\15continuous\3\0\rcallback\3\1\14build_dir\5\28vimtex_compiler_latexmk\6g\bvim\0" },
+    config = { "\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16user.vimtex\frequire\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
@@ -270,8 +275,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

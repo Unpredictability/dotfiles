@@ -7,7 +7,7 @@ return {
 				args = { "-pdfxe", "-interaction=nonstopmode", "-synctex=1", "-file-line-error", "-verbose" }, --, "%f"
 				executable = "latexmk",
 				forwardSearchAfter = false,
-				onSave = true,
+				onSave = false,
 			},
 			chktex = {
 				onEdit = true,

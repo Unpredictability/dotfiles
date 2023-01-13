@@ -28,8 +28,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	local date = os.date("%Y-%m-%d")
-	return "Hello:" .. date
+	return "Hello:" .. os.date()
 end
 
 dashboard.section.footer.val = footer()
