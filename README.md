@@ -5,4 +5,4 @@ so in order to use these files, you might change the filename by hand or
 use `chezmoi` to manage them for you.
 
 you might interested in my `LuaSnip` +  `LaTeX` config,
-see my snippets in [snippets](dot_config/nvim/lua/snippets).
+see my snippets in [snippets](https://github.com/Unpredictability/dotfiles/tree/main/dot_config/nvim/snippets).
