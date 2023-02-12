@@ -21,10 +21,11 @@ vim.g.vimtex_compiler_latexmk = {
 		"-interaction=nonstopmode",
 	},
 }
+
 vim.api.nvim_buf_set_keymap(
 	0,
 	"n",
 	"<leader>w",
-	"<cmd>lua vim.lsp.buf.format()<CR><cmd>w<CR><cmd>VimtexCompileSS<CR>",
+	"<cmd>w<CR><cmd>VimtexCompile<CR>",
 	{}
 )

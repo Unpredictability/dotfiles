@@ -40,6 +40,7 @@ return {
 		),
 		{ condition = conds.line_begin }
 	),
+
 	s(
 		{ trig = "enum", wordTRig = true, regTrig = false, snippetType = "autosnippet" },
 		fmta(
@@ -84,6 +85,19 @@ return {
 		{ trig = "<>", snippetType = "autosnippet" },
 		fmta("\\item[<>] <>", { i(1), i(0) }),
 		{ condition = in_description }
+	),
+
+	s(
+		{ trig = "prob", wordTRig = true, regTrig = false, snippetType = "autosnippet" },
+		fmta(
+			[[
+		\begin{problem} 
+			<>
+		\end{problem}
+			]],
+			{ i(0) }
+		),
+		{ condition = conds.line_begin }
 	),
 
 	s("#", fmta("\\section{<>}\n<>", { i(1, "Exercise"), i(0) }), { condition = conds.line_begin }),

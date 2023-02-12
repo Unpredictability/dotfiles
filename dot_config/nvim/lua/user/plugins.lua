@@ -115,6 +115,11 @@ return packer.startup(function(use)
 
 	use("marko-cerovac/material.nvim")
 
+	use("simrat39/rust-tools.nvim")
+
+	-- Debugger
+	use("mfussenegger/nvim-dap")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

@@ -3,6 +3,7 @@ local servers = {
 	"pyright",
 	"jsonls",
 	"texlab",
+	-- "rust_analyzer", rust-tools handles it
 }
 
 local settings = {

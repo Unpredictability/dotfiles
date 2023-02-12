@@ -1,26 +1,28 @@
 require("user.tex_utils")
 
 return {
-	s({
-		trig = "(sin|cos|tan|csc|sec|cot|arcsin|arccos|arctan|arccot|ln|log|exp|pi|int)",
-		regTrig = true,
-		snippetType = "autosnippet",
-	}, {
-		t("\\"),
-		f(function(_, snip)
-			return snip.captures[1]
-		end, {}),
-	}, { condition = in_mathzone }),
-	s({
-		trig = "(cap|cup|Cap|Cup|inf|sup)",
-		regTrig = true,
-		snippetType = "autosnippet",
-	}, {
-		t("\\"),
-		f(function(_, snip)
-			return snip.captures[1]
-		end, {}),
-	}, { condition = in_mathzone }),
+	-- s({ trig = "sin", snippetType = "autosnippet" }, t("\\sin"), { condition = in_mathzone }),
+	-- s({ trig = "cos", snippetType = "autosnippet" }, t("\\cos"), { condition = in_mathzone }),
+	-- s({ trig = "tan", snippetType = "autosnippet" }, t("\\tan"), { condition = in_mathzone }),
+	-- s({ trig = "csc", snippetType = "autosnippet" }, t("\\csc"), { condition = in_mathzone }),
+	-- s({ trig = "sec", snippetType = "autosnippet" }, t("\\sec"), { condition = in_mathzone }),
+	-- s({ trig = "cot", snippetType = "autosnippet" }, t("\\cot"), { condition = in_mathzone }),
+	-- s({ trig = "arcsin", snippetType = "autosnippet" }, t("\\arcsin"), { condition = in_mathzone }),
+	-- s({ trig = "arccos", snippetType = "autosnippet" }, t("\\arccos"), { condition = in_mathzone }),
+	-- s({ trig = "arctan", snippetType = "autosnippet" }, t("\\arctan"), { condition = in_mathzone }),
+	-- s({ trig = "arccot", snippetType = "autosnippet" }, t("\\arccot"), { condition = in_mathzone }),
+	-- s({ trig = "ln", snippetType = "autosnippet" }, t("\\ln"), { condition = in_mathzone }),
+	-- s({ trig = "log", snippetType = "autosnippet" }, t("\\log"), { condition = in_mathzone }),
+	-- s({ trig = "exp", snippetType = "autosnippet" }, t("\\exp"), { condition = in_mathzone }),
+	-- s({ trig = "pi", snippetType = "autosnippet" }, t("\\pi"), { condition = in_mathzone }),
+	-- s({ trig = "int", snippetType = "autosnippet" }, t("\\int"), { condition = in_mathzone }),
+	-- s({ trig = "cap", snippetType = "autosnippet" }, t("\\cap"), { condition = in_mathzone }),
+	-- s({ trig = "cup", snippetType = "autosnippet" }, t("\\cup"), { condition = in_mathzone }),
+	-- s({ trig = "Cap", snippetType = "autosnippet" }, t("\\Cap"), { condition = in_mathzone }),
+	-- s({ trig = "Cup", snippetType = "autosnippet" }, t("\\Cup"), { condition = in_mathzone }),
+	-- s({ trig = "inf", snippetType = "autosnippet" }, t("\\inf"), { condition = in_mathzone }),
+	-- s({ trig = "sup", snippetType = "autosnippet" }, t("\\sup"), { condition = in_mathzone }),
+
 	s({ trig = ";a", snippetType = "autosnippet" }, t("\\alpha"), { condition = in_mathzone }),
 	s({ trig = ";b", snippetType = "autosnippet" }, t("\\beta"), { condition = in_mathzone }),
 	s({ trig = ";c", snippetType = "autosnippet" }, t("\\gamma"), { condition = in_mathzone }),
@@ -29,10 +31,20 @@ return {
 	s({ trig = ";D", snippetType = "autosnippet" }, t("\\Delta"), { condition = in_mathzone }),
 	s({ trig = ";e", snippetType = "autosnippet" }, t("\\epsilon"), { condition = in_mathzone }),
 	s({ trig = ";n", snippetType = "autosnippet" }, t("\\eta"), { condition = in_mathzone }),
+	s({ trig = ";t", snippetType = "autosnippet" }, t("\\theta"), { condition = in_mathzone }),
+	s({ trig = ";p", snippetType = "autosnippet" }, t("\\varphi"), { condition = in_mathzone }),
 
-	s({ trig = "NN", snippetType = "autosnippet" }, t("\\mathbf{N}"), { condition = in_mathzone }),
-	s({ trig = "ZZ", snippetType = "autosnippet" }, t("\\mathbf{Z}"), { condition = in_mathzone }),
-	s({ trig = "QQ", snippetType = "autosnippet" }, t("\\mathbf{Q}"), { condition = in_mathzone }),
-	s({ trig = "RR", snippetType = "autosnippet" }, t("\\mathbf{R}"), { condition = in_mathzone }),
-	s({ trig = "CC", snippetType = "autosnippet" }, t("\\mathbf{C}"), { condition = in_mathzone }),
+	s({ trig = "NN", snippetType = "autosnippet" }, t("\\mathbb{N}"), { condition = in_mathzone }),
+	s({ trig = "ZZ", snippetType = "autosnippet" }, t("\\mathbb{Z}"), { condition = in_mathzone }),
+	s({ trig = "QQ", snippetType = "autosnippet" }, t("\\mathbb{Q}"), { condition = in_mathzone }),
+	s({ trig = "RR", snippetType = "autosnippet" }, t("\\mathbb{R}"), { condition = in_mathzone }),
+	s({ trig = "CC", snippetType = "autosnippet" }, t("\\mathbb{C}"), { condition = in_mathzone }),
+
+	s({ trig = "**", snippetType = "autosnippet" }, t("\\cdot"), { condition = in_mathzone }),
+	s({ trig = "xx", snippetType = "autosnippet" }, t("\\times"), { condition = in_mathzone }),
+
+	s({ trig = "...", snippetType = "autosnippet" }, t("\\cdots"), { condition = in_mathzone }),
+	s({ trig = "l..", snippetType = "autosnippet" }, t("\\ldots"), { condition = in_mathzone }),
+	s({ trig = "v..", snippetType = "autosnippet" }, t("\\vdots"), { condition = in_mathzone }),
+	s({ trig = "d..", snippetType = "autosnippet" }, t("\\ddots"), { condition = in_mathzone }),
 }

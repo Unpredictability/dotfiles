@@ -120,6 +120,28 @@ return {
 		}),
 		{ condition = in_mathzone }
 	),
+	postfix(
+		{ trig = "vec", match_pattern = "[%w%.%_%-%+%)%(%d]+$", snippetType = "autosnippet" },
+		fmta("\\overrightarrow{<>} <>", {
+			f(function(_, parent)
+				return parent.snippet.env.POSTFIX_MATCH
+			end, {}),
+			i(0),
+		}),
+		{ condition = in_mathzone }
+	),
+
+	-- fonts
+	postfix(
+		{ trig = "bf", match_pattern = "[%w%.%_%d]+$", snippetType = "autosnippet" },
+		fmta("\\mathbf{<>}<>", {
+			f(function(_, parent)
+				return parent.snippet.env.POSTFIX_MATCH
+			end, {}),
+			i(0),
+		}),
+		{ condition = in_mathzone }
+	),
 
 	-- Relations
 	s({ trig = ">>", wordTrig = false, snippetType = "autosnippet" }, t("\\gg"), { condition = in_mathzone }),
